@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bài 2</title>
+</head>
+<body>
+  <script>
+    let r = parseInt(prompt('Mời nhập bán kính đường tròn:'));
+
+    function getCircumference(r) {
+      return 2*r*Math.PI;
+    }
+
+    function getArea(r) {
+      return r*r*Math.PI;
+    }
+
+    document.write(`<p>Bán kính đường tròn nhập vào là: ${r}<br>Chu vi đường tròn đó là: ${getCircumference(r).toFixed(2)}<br>Diện tích đường tròn đó là: ${getArea(r).toFixed(2)}</p>`);
+  </script>
+</body>
+</html>

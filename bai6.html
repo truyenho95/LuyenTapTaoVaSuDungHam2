@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bài 6</title>
+</head>
+<body>
+  <script>
+    const vowels = ['o','u','e','a','i','O','U','E','A','I'];
+    let char = prompt('Mời nhập ký tự:');
+
+    function isVowel(char) {
+      for (let i = 0; i<vowels.length; i++) {
+        if (char[0]===vowels[i])
+          return alert('Ký tự nhập vào là nguyên âm');
+      }
+      return alert('Ký tự nhập vào là không phải nguyên âm');
+    }
+
+    isVowel(char);
+  </script>
+</body>
+</html>

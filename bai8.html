@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bài 8</title>
+</head>
+<body>
+  <script>
+    let x = prompt('Mời nhập mảng');
+    let arr = x.split(',');
+
+    function isWordChar(arr) {
+      let check=false;
+      for (let i=0; i<arr.length; i++) {
+        if ((arr[i].charCodeAt(0)>=48 && arr[i].charCodeAt(0)<=57) || (arr[i].charCodeAt(0)==45 && arr[i].charCodeAt(1)>=48 && arr[i].charCodeAt(1)<=57))
+          check = true;
+        else
+          return false;
+      }
+      return true;
+    }
+
+    function showArr(arr) {
+      for (let i=0; i<arr.length; i++)
+        document.write((i===arr.length-1) ? (arr[i]+'<br>') : (arr[i]+', '));
+    }
+
+    function reverse(arr) {
+      let first = 0;
+      let last = arr.length - 1;
+      while (first < last) {
+        let b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+        first++;
+        last--;
+      }
+    }
+
+    document.write('Mảng bạn nhập vào là: <br>');
+    showArr(arr);
+
+    if (isWordChar(arr)) {
+      reverse(arr);
+      document.write('Mảng sau khi đảo ngược là: <br>');
+      showArr(arr);
+    }
+    else {
+      alert('Mảng có chứa ký tự khác số nên không đảo ngược');
+    }
+    
+  </script>
+</body>
+</html>
